@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/med_app
+    username: postgres
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL81Dialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+server:
+  port: 8080
+  servlet:
+    context-path: /med-app
