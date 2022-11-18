@@ -1,6 +1,9 @@
 package uz.bakhromjon.medapp.entities;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import uz.bakhromjon.medapp.entities.base.AbstractEntity;
 
 import javax.persistence.Entity;

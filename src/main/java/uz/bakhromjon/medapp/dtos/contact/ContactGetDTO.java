@@ -1,9 +1,11 @@
-package uz.bakhromjon.medapp.dtos.company;
+package uz.bakhromjon.medapp.dtos.contact;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 import uz.bakhromjon.medapp.dtos.base.BaseDTO;
 import uz.bakhromjon.medapp.entities.Contact;
 import uz.bakhromjon.medapp.entities.Link;
@@ -17,12 +19,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompanyCreateDTO implements BaseDTO {
-    private String aboutUs;
-    private String email;
-    private List<Contact> contacts;
-    private String address;
-    private double latitude;
-    private double longitude;
-    private List<Link> links;
+public class ContactGetDTO extends AbstractDTO {
+    private String description;
 }
+

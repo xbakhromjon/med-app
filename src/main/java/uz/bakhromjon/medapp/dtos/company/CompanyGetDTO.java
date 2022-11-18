@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.bakhromjon.medapp.dtos.base.BaseDTO;
+import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 import uz.bakhromjon.medapp.entities.Contact;
 import uz.bakhromjon.medapp.entities.Link;
 
@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompanyCreateDTO implements BaseDTO {
+public class CompanyGetDTO extends AbstractDTO {
     private String aboutUs;
     private String email;
     private List<Contact> contacts;

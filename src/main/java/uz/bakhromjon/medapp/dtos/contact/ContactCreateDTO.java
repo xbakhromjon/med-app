@@ -1,4 +1,5 @@
-package uz.bakhromjon.medapp.dtos.faq;
+package uz.bakhromjon.medapp.dtos.contact;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,9 +12,9 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
  **/
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class FAQGetDTO extends AbstractDTO {
-    private String question;
-    private String answer;
+@NoArgsConstructor
+public class ContactCreateDTO extends AbstractDTO {
+    private String description;
 }
+
