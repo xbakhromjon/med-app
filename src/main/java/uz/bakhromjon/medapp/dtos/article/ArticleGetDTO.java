@@ -19,6 +19,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ArticleGetDTO extends AbstractDTO {
-    private String description;
+public class ArticleGetDTO implements AbstractDTO {
+    private Long id;
+    private String title;
+    private String content;
 }

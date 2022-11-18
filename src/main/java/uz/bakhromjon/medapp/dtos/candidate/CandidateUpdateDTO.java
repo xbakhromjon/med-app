@@ -14,7 +14,13 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CandidateUpdateDTO extends AbstractDTO {
-    private String description;
+public class CandidateUpdateDTO implements AbstractDTO {
+    private Long id;
+    private Long vacancyId;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private String phoneNumber;
+    private Long resumeId;
 }
 

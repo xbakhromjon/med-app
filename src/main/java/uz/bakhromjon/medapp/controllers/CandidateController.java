@@ -3,30 +3,29 @@ package uz.bakhromjon.medapp.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.bakhromjon.medapp.controllers.base.AbstractController;
-import uz.bakhromjon.medapp.dtos.company.CompanyCreateDTO;
-import uz.bakhromjon.medapp.dtos.company.CompanyGetDTO;
-import uz.bakhromjon.medapp.dtos.company.CompanyUpdateDTO;
-import uz.bakhromjon.medapp.services.CompanyService;
+import uz.bakhromjon.medapp.dtos.candidate.CandidateCreateDTO;
+import uz.bakhromjon.medapp.dtos.candidate.CandidateUpdateDTO;
+import uz.bakhromjon.medapp.services.CandidateService;
 
 /**
  * @author : Bakhromjon Khasanboyev
  **/
 
 @RestController
-@RequestMapping("/company")
-public class CompanyController extends AbstractController<CompanyService> {
+@RequestMapping("/candidate")
+public class CandidateController extends AbstractController<CandidateService> {
 
-    public CompanyController(CompanyService service) {
+    public CandidateController(CandidateService service) {
         super(service);
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody CompanyCreateDTO createDTO) {
+    public ResponseEntity<?> create(@RequestBody CandidateCreateDTO createDTO) {
         return service.create(createDTO);
     }
 
     @PutMapping
-    public ResponseEntity<?> update(@RequestBody CompanyUpdateDTO updateDTO) {
+    public ResponseEntity<?> update(@RequestBody CandidateUpdateDTO updateDTO) {
         return service.update(updateDTO);
     }
 

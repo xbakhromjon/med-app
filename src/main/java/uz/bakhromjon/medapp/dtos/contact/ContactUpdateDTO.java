@@ -14,7 +14,8 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactUpdateDTO extends AbstractDTO {
+public class ContactUpdateDTO implements AbstractDTO {
+    private Long id;
     private String description;
 }
 

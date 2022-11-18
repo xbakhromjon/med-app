@@ -15,7 +15,8 @@ import uz.bakhromjon.medapp.dtos.base.BaseDTO;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CandidateGetDTO extends AbstractDTO {
+public class CandidateGetDTO implements AbstractDTO {
+    private Long id;
     private String description;
 }
 

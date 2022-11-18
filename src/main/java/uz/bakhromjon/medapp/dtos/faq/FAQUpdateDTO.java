@@ -13,7 +13,8 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class FAQUpdateDTO extends AbstractDTO {
+public class FAQUpdateDTO implements AbstractDTO {
+    private Long id;
     private String question;
     private String answer;
 }

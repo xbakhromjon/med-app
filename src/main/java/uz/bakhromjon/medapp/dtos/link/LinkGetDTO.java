@@ -16,8 +16,10 @@ import uz.bakhromjon.medapp.dtos.base.BaseDTO;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LinkGetDTO extends AbstractDTO {
-    private String description;
+public class LinkGetDTO implements AbstractDTO {
+    private Long id;
+    private String value;
+    private Integer linkTypeCode;
 }
 
 

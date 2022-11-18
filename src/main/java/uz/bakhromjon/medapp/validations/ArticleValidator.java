@@ -5,10 +5,19 @@ package uz.bakhromjon.medapp.validations;
  **/
 
 import org.springframework.stereotype.Component;
+import uz.bakhromjon.medapp.dtos.article.ArticleCreateDTO;
+import uz.bakhromjon.medapp.dtos.article.ArticleUpdateDTO;
 import uz.bakhromjon.medapp.validations.base.BaseValidator;
 
 
 @Component
 public class ArticleValidator implements BaseValidator {
 
+    public void validForCreate(ArticleCreateDTO createDTO) {
+
+    }
+
+    public void validForUpdate(ArticleUpdateDTO updateDTO) {
+
+    }
 }

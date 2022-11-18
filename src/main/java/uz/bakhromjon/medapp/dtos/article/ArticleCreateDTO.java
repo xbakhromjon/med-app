@@ -15,5 +15,6 @@ import uz.bakhromjon.medapp.dtos.base.BaseDTO;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ArticleCreateDTO implements BaseDTO {
-    private String description;
+    private String title;
+    private String content;
 }

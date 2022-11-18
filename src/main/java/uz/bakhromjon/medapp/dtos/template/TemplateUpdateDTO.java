@@ -14,12 +14,7 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 @Setter
 @Getter
 @NoArgsConstructor
-public class TemplateUpdateDTO extends AbstractDTO {
+public class TemplateUpdateDTO implements AbstractDTO {
+    private Long id;
     private String description;
-
-    @Builder
-    public TemplateUpdateDTO(Long id, String description) {
-        super(id);
-        this.description = description;
-    }
 }

@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * @author : Bakhromjon Khasanboyev
  **/
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-public abstract class AbstractDTO {
-    private Long id;
+
+public interface AbstractDTO {
+
 }

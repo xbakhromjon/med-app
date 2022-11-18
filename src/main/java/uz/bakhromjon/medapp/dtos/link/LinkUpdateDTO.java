@@ -15,7 +15,8 @@ import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LinkUpdateDTO extends AbstractDTO {
+public class LinkUpdateDTO implements AbstractDTO {
+    private Long id;
     private String description;
 }
 

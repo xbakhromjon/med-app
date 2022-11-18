@@ -1,14 +1,11 @@
 package uz.bakhromjon.medapp.dtos.link;
 
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.bakhromjon.medapp.dtos.base.BaseDTO;
-
-import java.util.List;
 
 /**
  * @author : Bakhromjon Khasanboyev
@@ -18,7 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LinkCreateDTO implements BaseDTO {
-    private String description;
+    private String value;
+    private Integer linkTypeCode;
 }
 
 

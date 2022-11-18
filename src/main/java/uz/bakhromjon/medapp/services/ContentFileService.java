@@ -125,8 +125,8 @@ public class ContentFileService extends  AbstractService<ContentFileRepository, 
     }
 
 
-    public ContentFile getPersist(Long ID) {
-        Optional<ContentFile> optional = repository.findById(ID);
+    public ContentFile getPersist(Long id) {
+        Optional<ContentFile> optional = repository.findById(id);
         return optional.orElseThrow(() -> {
             throw new UniversalException("File Not Found", HttpStatus.BAD_REQUEST);
         });

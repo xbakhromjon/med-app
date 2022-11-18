@@ -14,7 +14,8 @@ import uz.bakhromjon.medapp.entities.ContentFile;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LicenseUpdateDTO extends AbstractDTO {
+public class LicenseUpdateDTO implements AbstractDTO {
+    private Long id;
     private ContentFile contentFile;
     private String definition;
 }

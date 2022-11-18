@@ -19,7 +19,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactGetDTO extends AbstractDTO {
-    private String description;
+public class ContactGetDTO implements AbstractDTO {
+    private Long id;
+    private String phoneNumber;
 }
 
