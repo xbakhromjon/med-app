@@ -15,4 +15,5 @@ import javax.persistence.Entity;
 @Entity
 public class HearAboutClinic extends AbstractEntity {
     private String hearAboutClinic;
+    private Boolean isDeleted = false;
 }

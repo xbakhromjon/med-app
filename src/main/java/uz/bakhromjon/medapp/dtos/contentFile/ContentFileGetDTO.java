@@ -1,16 +1,17 @@
-package uz.bakhromjon.medapp.dtos.candidate;
+package uz.bakhromjon.medapp.dtos.contentFile;
+
+import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 import uz.bakhromjon.medapp.dtos.base.BaseDTO;
-import uz.bakhromjon.medapp.dtos.contentFile.ContentFileGetDTO;
 import uz.bakhromjon.medapp.entities.ContentFile;
 
 import javax.persistence.OneToOne;
+import java.util.List;
 
 /**
  * @author : Bakhromjon Khasanboyev
@@ -19,12 +20,10 @@ import javax.persistence.OneToOne;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CandidateGetDTO implements AbstractDTO {
+public class ContentFileGetDTO implements AbstractDTO {
     private Long id;
-    private String firstname;
-    private String lastname;
-    private String email;
-    private String phoneNumber;
-    private ContentFileGetDTO resume;
+    private String originalName;
+    private String generatedName;
+    private Long size;
+    private String contentType;
 }
-

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
+import uz.bakhromjon.medapp.dtos.contentFile.ContentFileGetDTO;
 import uz.bakhromjon.medapp.entities.ContentFile;
 
 /**
@@ -16,6 +17,6 @@ import uz.bakhromjon.medapp.entities.ContentFile;
 @AllArgsConstructor
 public class LicenseGetDTO implements AbstractDTO {
     private Long id;
-    private ContentFile contentFile;
+    private ContentFileGetDTO contentFile;
     private String definition;
 }

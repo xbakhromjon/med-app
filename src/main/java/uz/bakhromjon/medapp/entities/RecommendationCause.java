@@ -15,4 +15,5 @@ import javax.persistence.Entity;
 @Entity
 public class RecommendationCause extends AbstractEntity {
     private String cause;
+    private Boolean isDeleted = false;
 }

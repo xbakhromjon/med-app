@@ -2,11 +2,12 @@ package uz.bakhromjon.medapp.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import uz.bakhromjon.medapp.exceptions.UniversalException;
+
+import java.util.EnumSet;
 
 /**
  * @author : Bakhromjon Khasanboyev
- * @username: @xbakhromjon
- * @since : 01/10/22, Sat, 10:29
  **/
 @RequiredArgsConstructor
 @Getter
@@ -18,4 +19,13 @@ public enum Grade {
 
     private final String name;
     private final Integer code;
+
+    public static String toString(Integer code) {
+        EnumSet<Grade> enumSet = EnumSet.allOf(Grade.class);
+        for (Grade grade : enumSet) {
+            if (grade.getCode().equals(code)) return grade.getName();
+        }
+        // default
+        return "EXCELLENT";
+    }
 }

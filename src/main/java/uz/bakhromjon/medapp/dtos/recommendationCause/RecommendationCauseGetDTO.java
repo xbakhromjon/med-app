@@ -1,21 +1,24 @@
-package uz.bakhromjon.medapp.dtos.license;
+package uz.bakhromjon.medapp.dtos.recommendationCause;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
-import uz.bakhromjon.medapp.entities.ContentFile;
+import uz.bakhromjon.medapp.dtos.base.BaseDTO;
+
+import java.util.List;
 
 /**
  * @author : Bakhromjon Khasanboyev
  **/
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class LicenseUpdateDTO implements AbstractDTO {
+@NoArgsConstructor
+public class RecommendationCauseGetDTO implements AbstractDTO {
     private Long id;
-    private Long contentFileId;
-    private String definition;
+    private String cause;
 }
+

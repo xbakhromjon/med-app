@@ -1,18 +1,24 @@
-package uz.bakhromjon.medapp.entities;
+package uz.bakhromjon.medapp.dtos.feedback;
 
-import lombok.*;
-import uz.bakhromjon.medapp.entities.base.AbstractEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
+import uz.bakhromjon.medapp.dtos.base.BaseDTO;
+
 import java.util.List;
 
+/**
+ * @author : Bakhromjon Khasanboyev
+ **/
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Feedback extends AbstractEntity {
+@NoArgsConstructor
+public class FeedbackUpdateDTO implements AbstractDTO {
+    private Long id;
     private String phoneNumber;
     private String email;
     private String patientCode;
@@ -25,12 +31,10 @@ public class Feedback extends AbstractEntity {
     private Integer workOfNurseOptometrist = -1;
     private Boolean isPriceMatchQuality;
     private Boolean canRecommend;
-    @OneToMany
-    private List<RecommendationCause> recommendationCauses;
+    private List<Long> recommendationCausesId;
     private Boolean ourStaffYourTimeEnjoyable;
     private String name;
     private String suggestion;
-    @OneToMany
-    private List<HearAboutClinic> hearAboutOurClinic;
-    private Boolean isDeleted = false;
+    private List<Long> hearAboutOurClinicsId;
 }
+

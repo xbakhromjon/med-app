@@ -5,6 +5,7 @@ package uz.bakhromjon.medapp.validations;
  **/
 
 import org.springframework.stereotype.Component;
+import uz.bakhromjon.medapp.dtos.vacancy.VacancyCreateDTO;
 import uz.bakhromjon.medapp.validations.base.BaseValidator;
 
 
@@ -12,4 +13,7 @@ import uz.bakhromjon.medapp.validations.base.BaseValidator;
 @Component
 public class VacancyValidator implements BaseValidator {
 
+    public void validForCreate(VacancyCreateDTO createDTO) {
+
+    }
 }

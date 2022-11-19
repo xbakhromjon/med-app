@@ -1,20 +1,22 @@
-package uz.bakhromjon.medapp.dtos.license;
+package uz.bakhromjon.medapp.dtos.hearAboutClinic;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import uz.bakhromjon.medapp.dtos.base.AbstractDTO;
 import uz.bakhromjon.medapp.dtos.base.BaseDTO;
-import uz.bakhromjon.medapp.entities.ContentFile;
 
 /**
  * @author : Bakhromjon Khasanboyev
  **/
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class LicenseCreateDTO implements BaseDTO {
-    private Long contentFileId;
-    private String definition;
+@NoArgsConstructor
+public class HearAboutClinicGetDTO implements AbstractDTO {
+    private Long id;
+    private String hearAboutClinic;
 }
+

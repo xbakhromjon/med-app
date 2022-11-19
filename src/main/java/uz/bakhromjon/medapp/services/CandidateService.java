@@ -1,6 +1,7 @@
 package uz.bakhromjon.medapp.services;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ import java.util.Optional;
  * @author : Bakhromjon Khasanboyev
  **/
 @Service
+@Slf4j
 public class CandidateService extends AbstractService<CandidateRepository,
         CandidateMapper, CandidateValidator> {
 
@@ -34,7 +36,7 @@ public class CandidateService extends AbstractService<CandidateRepository,
     @Autowired
     private ContentFileService contentFileService;
 
-    public CandidateService(CandidateRepository repository, CandidateMapper mapper, CandidateValidator validator) {
+    public CandidateService(CandidateRepository repository,  CandidateMapper mapper, CandidateValidator validator) {
         super(repository, mapper, validator);
     }
 
@@ -45,11 +47,13 @@ public class CandidateService extends AbstractService<CandidateRepository,
         candidate = repository.save(candidate);
         vacancy.getCandidates().add(candidate);
         vacancyService.save(vacancy);
+        log.info("Candidate succesfully create {} with id", candidate.getId());
         return ResponseEntity.ok(mapper.toGetDTO(candidate));
     }
 
     public ResponseEntity<CandidateGetDTO> get(Long id) {
         Candidate candidate = getPersist(id);
+        log.info("Get candidate {} with id", id);
         return ResponseEntity.ok(mapper.toGetDTO(candidate));
     }
 
@@ -63,6 +67,7 @@ public class CandidateService extends AbstractService<CandidateRepository,
         ContentFile resume = contentFileService.getPersist(updateDTO.getResumeId());
         candidate.setResume(resume);
         candidate = repository.save(candidate);
+        log.info("Candidate succesfully updated {} with id", updateDTO.getId());
         return ResponseEntity.ok(mapper.toGetDTO(candidate));
     }
 
@@ -70,6 +75,7 @@ public class CandidateService extends AbstractService<CandidateRepository,
     public Candidate getPersist(Long id) {
         Optional<Candidate> optional = repository.findById(id);
         return optional.orElseThrow(() -> {
+            log.warn("Candidate not found {} with id", id);
             throw new UniversalException("Candidate not found %s with".formatted(id), HttpStatus.BAD_REQUEST);
         });
     }

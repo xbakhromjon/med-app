@@ -1,10 +1,11 @@
 package uz.bakhromjon.medapp.repositories;
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import uz.bakhromjon.medapp.entities.Article;
+import uz.bakhromjon.medapp.entities.HearAboutClinic;
 import uz.bakhromjon.medapp.repositories.base.BaseRepository;
 
 import javax.transaction.Transactional;
@@ -15,14 +16,12 @@ import java.util.Optional;
  **/
 @Repository
 @Transactional
-public interface ArticleRepository extends JpaRepository<Article, Long>, BaseRepository {
+public interface HearAboutClinicRepository extends JpaRepository<HearAboutClinic, Long>, BaseRepository {
+    Optional<HearAboutClinic> findByIdAndIsDeleted(Long id, boolean isDeleted);
 
     @Query(nativeQuery = true, value = """
-            update article set is_deleted = true where id = :id
+            update hear_about_clinic set is_deleted = true where id = :id
             """)
     @Modifying
     void delete(Long id);
-
-
-    Optional<Article> findByIdAndIsDeleted(Long id, Boolean isDeleted);
 }

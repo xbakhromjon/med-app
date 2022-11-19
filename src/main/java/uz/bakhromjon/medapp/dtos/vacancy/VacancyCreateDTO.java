@@ -19,5 +19,4 @@ public class VacancyCreateDTO {
     private String position;
     private Integer employment;
     private String content;
-    private List<Candidate> candidates;
 }
